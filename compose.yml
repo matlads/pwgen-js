@@ -13,6 +13,7 @@ services:
       - /var/run
     volumes:
       - ./index.html:/usr/share/nginx/html/index.html:ro
+      - ./favicon.ico:/usr/share/nginx/html/favicon.ico:ro
       - ./pwgen.js:/usr/share/nginx/html/pwgen.js:ro
       - ./prototype.js:/usr/share/nginx/html/prototype.js:ro
       - ./pwgen.css:/usr/share/nginx/html/pwgen.css:ro
