@@ -1,6 +1,6 @@
 # pwgen.js
 
-![CI](https://github.com/matlads/pwgen-js/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/kzys/pwgen-js/actions/workflows/ci.yml/badge.svg)
 
 This program is a JavaScript port of pwgen. [The original C implementation][1] was written by Theodore Ts'o.
 
