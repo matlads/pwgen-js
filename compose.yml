@@ -1,0 +1,25 @@
+---
+services:
+  pwgen-js:
+    image: nginx:alpine
+    container_name: pwgen-js
+    restart: unless-stopped
+    networks:
+      - app_network
+    read_only: true
+    tmpfs:
+      - /tmp
+      - /var/cache/nginx
+      - /var/run
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html:ro
+      - ./pwgen.js:/usr/share/nginx/html/pwgen.js:ro
+      - ./prototype.js:/usr/share/nginx/html/prototype.js:ro
+      - ./pwgen.css:/usr/share/nginx/html/pwgen.css:ro
+      - ./pwgen-app.js:/usr/share/nginx/html/pwgen-app.js:ro
+    security_opt:
+      - no-new-privileges:true
+
+networks:
+  app_network:
+    name: appdata_app_network
