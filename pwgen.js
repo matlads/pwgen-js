@@ -168,4 +168,6 @@ PWGen.prototype.ELEMENTS = [
     [ "z",  PWGen.prototype.CONSONANT ],
 ];
     
-module.exports = PWGen;
+if (typeof module !== "undefined" && module.exports) {
+    module.exports = PWGen;
+}
